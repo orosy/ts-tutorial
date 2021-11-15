@@ -11,6 +11,14 @@ const [info, setInformation] = useState<Information | null>(null);
 2. Input 상태 관리하기
 3. Counter를 `useReducer`로 다시 구현하기
 - `useReducer`를 사용할 때에는 액션에 대한 타입스크립트 타입들을 모두 준비해서 `|` 문자를 사용하여 결합시켜야합니다.`
+- 예시 코드
+```jsx
+type Action =
+  | { type: 'SET_COUNT'; count: number }
+  | { type: 'SET_TEXT'; text: string }
+  | { type: 'SET_COLOR'; color: Color }
+  | { type: 'TOGGLE_GOOD' };
+```
 
 <br />
 
